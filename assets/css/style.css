@@ -1,0 +1,758 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    background: #fff;
+}
+
+body {
+    max-width: 1366px;
+    margin: auto;
+    height: 100vh;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+.banner {
+    width: 100%;
+    height: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: url(https://www.nissanusa.com/content/dam/Nissan/us/homepage/secondary-pfa/nissan-ariya-ev.jpg) no-repeat center/cover;
+}
+
+nav {
+    height: 120px;
+    width: 100%;
+    padding: 0 2%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: .4s ease;
+}
+
+.nav__logo {
+    height: 100%;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__col {
+    display: flex;
+    gap: 25px;
+    height: 100%;
+    align-items: center;
+}
+
+.nav__item {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav__item:nth-child(1),
+.nav__item:nth-child(2),
+.nav__item:nth-child(3) {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.nav__btn {
+    border: 1px solid #000;
+    background: transparent;
+    color: #000;
+    width: 130px;
+    min-height: 40px;
+    font-size: 16px;
+    transition: .5s;
+}
+
+.nav__btn:hover {
+    background: #990505;
+    border: none;
+    color: #fff;
+}
+
+.banner .texts {
+    padding: 15px 8%;
+    height: calc(100% - 250px);
+    width: 50%;
+}
+
+.banner .texts h3 {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.banner .texts h1 {
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.banner .texts p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background: black;
+    border: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.btn:hover {
+    opacity: .9;
+}
+
+.media {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    display: none;
+}
+
+.vehicles {
+    position: fixed;
+    left: 0;
+    top: 120px;
+    height: 0;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5%;
+    background: #eee;
+    transition: .7s height ease;
+    display: none;
+}
+
+.vehicles__top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 2px solid #fff;
+}
+
+.vehicles__top h2 {
+    font-size: 38px;
+    font-weight: 400;
+    flex: 1;
+}
+
+.vehicles__col {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.vehicles__item a {
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+}
+
+.quit {
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.vehicles__item a:hover {
+    text-decoration: underline;
+}
+
+.vehicles__btm {
+    width: 100%;
+    flex: 1;
+    padding: 20px 0;
+    display: flex;
+}
+
+.category {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.category h2 {
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    border-bottom: 4px solid #000;
+}
+.category__item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.category__item:hover {
+    text-decoration: underline;
+}
+
+.btn span, .btn i {
+    color: #fff;
+}
+
+.car {
+    position: relative;
+    transition: .4s ease;
+    overflow: hidden;
+    width: 320px;
+    height: 265px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.car::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 5px;
+    background: red;
+    transition: .4s ease;
+}
+
+.cars {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.car:hover {
+    background: #fff;
+}
+
+.car img {
+    width: 100%;
+}
+
+.car:hover::before {
+    bottom: 0;
+}
+
+.show {
+    height: calc(100vh - 120px);
+    overflow: auto;
+    display: block;
+}
+
+.show nav {
+    background: #fff;
+}
+
+.explore {
+    width: 100%;
+    height: auto;
+    padding: 35px 5%;
+    background: #eee;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.explore__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #bbb;
+}
+
+.explore__item {
+    display: flex;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    align-items: center;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.explore__item h2 {
+    font-weight: 500;
+}
+
+.explore__item:hover {
+    opacity: .7;
+}
+
+.explore__item span {
+    width: 20px;
+    height: 20px;
+    background: #ddd;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.explore__item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 5px;
+    background: #000;
+    transition: .4s ease;
+}
+
+.explore__item:nth-child(1) h2 {
+    font-weight: 700;
+}
+
+.explore__item:nth-child(1)::before {
+    bottom: 0;
+}
+
+.explore__item:hover::before {
+    bottom: 0;
+}
+
+.explore__cars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.explore__cars .car .price {
+    font-weight: 700;
+}
+
+.explore__cars .car {
+    width: 280px;
+    height: 250px;
+    cursor: pointer;
+}
+
+.someone {
+    width: 100%;
+    height: auto;
+    padding: 30px 5%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+.someone__item {
+    height: 100px;
+    width: 300px;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    transition: .4s ease;
+}
+
+.someone__item i {
+    font-size: 32px;
+    transition: .4s ease;
+}
+
+.someone__item {
+    font-size: 14px;
+}
+
+.someone__item:hover {
+    border: none;
+    background: red;
+    color: #fff;
+}
+
+.someone__item:hover i {
+    color: #fff;
+}
+
+.search__bar {
+    position: fixed;
+    width: 100%;
+    height: 0;
+    overflow: auto;
+    top: 120px;
+    left: 0;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    transition: .4s ease;
+}
+
+.search__box {
+    width: 571px;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inp {
+    width: 490px;
+    height: 100%;
+    border-radius: 7px 0 0 7px;
+    border: none;
+    outline: none;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.search__btn {
+    width: 80px;
+    height: 60px;
+    border-radius: 0 7px 7px 0;
+    border: none;
+    outline: none;
+    background: #fff;
+    font-size: 18px;
+}
+
+.inp:focus {
+    border: 2px solid #0080ff;
+}
+
+.white {
+    background: #fff;
+}
+
+.active {
+    height: 120px;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.electrify {
+    width: 100%;
+    height: 600px;
+    background: url(https://www.nissanusa.com/content/dam/Nissan/us/homepage/2023-nissan-leaf-and-ariya-d-v3.jpg) no-repeat center/cover;
+    display: flex;
+    padding: 10%;
+}
+
+.electrify__text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.electrify__text h3 {
+    font-size: 56px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.electrify__text p {
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.nav__btn i {
+    transition: .4s ease;
+}
+
+.nav__btn:hover i {
+    color: #fff;
+}
+
+.find .btn,
+.electrify .btn {
+    background: #960233;
+}
+
+.nissan__car .nav__btn:hover {
+    background: #000;
+}
+
+.nissan__cars {
+    width: 100%;
+    padding: 50px 5%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.nissan__car {
+    display: flex;
+    flex-direction: column;
+    width: 33.3333%;
+    margin-bottom: 15px;
+}
+
+.nissan__content {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.nissan__img {
+    position: relative;
+    width: 100%;
+}
+
+.nissan__img h2 {
+    position: absolute;
+    bottom: 15px;
+    left: 18px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.nissan__content h2 {
+    font-weight: 400;
+    height: 60px;
+}
+
+.nissan__content p {
+    font-size: 15px;
+    height: 30px;
+}
+
+.shop {
+    width: 100%;
+    height: auto;
+    background: #eee;
+    padding: 80px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+    flex-wrap: wrap;
+}
+
+.shop .nissan__car {
+    width: 48%;
+    height: 650px;
+}
+
+.nissan__content h3 {
+    font-size: 20px;
+    font-weight: 400;
+    height: 40px;
+}
+
+.nissan__content h3 span {
+    color: #f00;
+}
+
+.find {
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    background: #eee;
+    text-align: center;
+}
+
+.find h2 {
+    font-weight: 300;
+    font-size: 38px;
+}
+
+.shop .nissan__car {
+    margin-bottom: 15px;
+}
+
+.shop .nissan__content:nth-child(1) h2 {
+    font-size: 38px;
+    height: 150px;
+}
+
+.shop .nissan__car:nth-child(1) {
+    flex-direction: row;
+    width: 100%;
+    height: 315px;
+}
+
+.discover {
+    width: 100%;
+    height: auto;
+    padding: 50px 7.5%;
+}
+
+.dis__title {
+    font-size: 36px;
+    font-weight: 300;
+    padding-bottom: 20px;
+    width: 100%;
+    border-bottom: 2px solid #000;
+    margin-bottom: 20px;
+}
+
+.dis__cars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.dis__cars .nissan__car {
+    width: 33.333%;
+}
+
+.dis__cars .nissan__car .nissan__content {
+    gap: 7px;
+}
+
+.dis__cars .nissan__car .nissan__content h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.dis__cars .nissan__car .nissan__content h3 {
+    font-size: 16px;
+    font-weight: 600;
+    height: 15px;
+}
+
+footer {
+    width: 100%;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.footer__top {
+    width: 100%;
+    display: flex;
+    padding: 10px 5%;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.links li h4 {
+    color: #fff;
+}
+
+.links li {
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.links li:hover {
+    text-decoration: underline;
+}
+
+.footer__mdl {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 5%;
+    border-bottom: 2px solid #fff;
+}
+
+.footer__mdl h2 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icons i {
+    color: #000;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+
+.footer__btm {
+    width: 100%;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__btm li {
+    color: #fff;
+    cursor: pointer;
+}
+
+.footer__btm li:nth-child(10) {
+    padding: 10px 12px;
+    border: 1px solid #fff;
+}
+
+.footer__btm li:hover {
+    text-decoration: underline;
+}
+
+
+

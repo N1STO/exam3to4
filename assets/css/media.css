@@ -1,0 +1,152 @@
+@media screen and (max-width: 1100px) {
+    .nav__col {
+        display: none;
+    }
+    nav {
+        height: 80px;
+    }
+    .nav__logo img {
+        height: 90%;
+    }
+    .banner .texts { 
+        width: 100%;
+        padding: 15px 10%;
+        padding-top: 10%;
+    }
+    .media {
+        display: inline-block;
+    }
+    .someone {
+        flex-wrap: wrap;
+        gap: 35px;
+    }
+    .shop .nissan__car:nth-child(1) {
+        flex-direction: column;
+        height: 600px;
+        justify-content: space-between;
+    }
+    .dis__cars .nissan__car .nissan__img {
+        width: 100%;
+    }
+    .dis__cars .nissan__car .nissan__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .nissan__cars {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .nissan__cars .nissan__car {
+        min-width: 100%;
+        align-items: center;
+        justify-content: center;
+        padding-left: 17%;
+    }
+    .shop .nissan__car {
+        width: 100%;
+    }
+    .shop .nissan__content {
+        height: 300px;
+        width: 100%;
+    }
+    .shop .nissan__car:nth-child(1) {
+        gap: 10px;
+    }
+    .dis__cars {
+        flex-wrap: wrap;
+    }
+    .dis__cars .nissan__car {
+        width: 50%;
+    }
+    .electrify__text {
+        width: 100%;
+    }
+    .footer__btm {
+        flex-wrap: wrap;
+    }
+    .footer__btm li {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .dis__cars .nissan__car {
+        width: 100%;
+    }
+}
+
+.shop .nissan__car .nissan__img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.media__nav__col {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 80px;
+    z-index: 5;
+    right: -105%;
+    background: #eee;
+    padding: 15px;
+    transition: .4s ease;
+}
+
+.nav__search__box {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+    gap: 5px;
+}
+
+.nav__search__box input {
+    width: calc(100% - 5px - 35%);
+    border: none;
+    border-radius: 7px 0 0 7px;
+    height: 50px;
+    color: #bbb;
+    font-size: 16px;
+    padding-left: 15px;
+    outline: none;
+}
+
+.nav__search__box button {
+    width: calc(100% - 5px - 92%);
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-radius: 0 7px 7px 0;
+    background: #fff;
+}
+
+.media__nav__col .nav__item {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    border-bottom: 2px solid #fff;
+}
+
+.media__nav__col .nav__item:nth-child(2),
+.media__nav__col .nav__item:nth-child(3),
+.media__nav__col .nav__item:nth-child(4) {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.showed {
+    right: 0;
+}
